@@ -1,0 +1,116 @@
+
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css");
+
+/* 스타일 초기화 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 1em;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main{
+    display: block;
+}
+ul {
+	list-style-type: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.readable-hidden, .skip-nav, legend{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin:-1px;
+    clip: rect(0,0,0,0);
+}
+html{
+    font-size: 10px;
+}
+body{
+    color: #999;
+    background: linear-gradient(to top, rgba(232,81,158,.8) , rgba(199,127,242,.8)) fixed, url("images/bg-01.jpg") no-repeat;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+    /* cursor: crosshair; */
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+.header, .visual, .main, .slogan, .footer{
+    width: 100%; 
+    margin: 0  auto;
+    /* p, m를 width 값을 포함  */
+    /* box-sizing: border-box; */
+}
+.container{
+    position: relative;
+    height: 100vh;
+}
+.group{
+    background: #fff;
+    position: absolute;
+    height: inherit;
+    right:0;
+    width: 520px;
+}
+.sign{
+    padding: 60px 50px 50px 50px;;
+}
+.sign-heading{
+    font-size: 4rem;
+    font-weight: 700;
+    color:#333;
+}
+.sign-form{
+    margin-top: 30px;
+}
+.sign-form fieldset{
+    border: 0;
+    padding: 0;
+}
+.fullname label, .email label, .username label, .pwd label, .re-pwd label{
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.fullname input, .email input, .username input, .pwd input, .re-pwd input{
+    display: inline-block;
+    margin: 10px 0 20px 0;
+    height: 50px;
+    padding: 5px;
+    width: 100%;
+    font-size: 2rem;
+    border: 0;
+    border-bottom: 2px solid #ccc;
+}
+

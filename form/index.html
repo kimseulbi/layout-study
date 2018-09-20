@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login V13</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="group">
+            <section class="sign">
+                <h2 class="sign-heading">Sign Up</h2>
+                <form action="https://formspree.io/ksb5166@gmail.com" method="POST" class="sign-form">
+                    <fieldset>
+                        <legend>회원 로그인 폼</legend>
+                        <div class="fullname">
+                            <label for="user-fullname">Full Name</label>
+                            <input type="text" name="user-fullname" id="user-fullname" placeholder="Name...">
+                        </div>
+                        <div class="email">
+                            <label for="user-email">Email</label>
+                            <input type="email" name="user-email" id="user-email" placeholder="Email addess...">
+                        </div>
+                        <div class="username">
+                            <label for="user-username">Username</label>
+                            <input type="text" name="user-username" id="user-username" placeholder="Username...">
+                        </div>
+                        <div class="pwd">
+                            <label for="user-pwd">Password</label>
+                            <input type="password" name="user-pwd" id="user-pwd" placeholder="***********">
+                        </div>
+                        <div class="re-pwd">
+                            <label for="user-re-pwd">Repeat Password</label>
+                            <input type="password" name="user-re-pwd" id="user-re-pwd" placeholder="***********">
+                        </div>
+                        <div class="agree">
+                            <input type="checkbox" name="user-agree" id="user-agree">
+                            <label for="user-agree"><span>I agree to the </span><em>Terms of User</em></label>
+                        </div>
+                        <div class="sign-btn">
+                            <button class="sign-up">Sign Up</button>
+                            <button class="sign-in">Sign In</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+    </div>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+</body>
+
+</html>
