@@ -1,0 +1,89 @@
+/* CSS를 활용한 레이아웃 및 UI 디자인 */
+body{
+    margin: 0;
+}
+/* 리셋 css */
+h1, h2, h3, h4, h5, h6{
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0;
+}
+
+/*  만든적은 없으나 유령 콘텐츠
+    float: 이슈를 해결하기 위한 css코드
+    가상요소를 넣는것을 권장함 
+*/
+.clearfix::after{
+    /* 값이 없는 content가 있어야지만 가상요소가 있어아함 */
+    content: "";
+    display: block;
+    clear: both;
+}
+/* 레이아웃 */
+.container{
+    background-color: #aaa;
+   /* 100vh 화면에 보여지는 브라우저 높이값*/
+    height: 100vh;
+}
+.header, .visual, .main, .slogan, .footer{
+    width: 940px; 
+    margin: 0  auto;
+
+}
+/* 헤더 */
+.header{
+    background-color: yellow;
+    /* 10vh 10/1 만큼  */
+    height: 10vh;
+}
+/* 비주얼 */
+.visual{
+    background-color: orange;
+    height: 10vh;
+}
+/* 메인 */
+.main{
+    background-color: blue;
+    /* height: 60vh; */
+    /* overflow 권장 하지 않는다. 이슈가 있음 */
+    /* overflow: hidden; */
+}
+.main div{
+    height: 100px;
+}
+.group1{
+    background-color: yellow;
+    width: 250px;
+    float: left;
+    position: relative;
+    left: -50px;
+}
+.group2{
+    background-color:teal;
+    width: 380px;
+    float: left;
+}
+.group3{
+    background-color: pink;
+    width: 200px;
+    float: left;
+}
+
+/* 슬로건 */
+.slogan{
+    background-color: lime;
+    height: 10vh;
+    margin-top: 50px;
+    /* clear는 block 상자 일떄만 사용 가능 */
+    /* clear: both; */
+    /* display: block; */
+}
+/* 푸터배경 */
+.footer-bg{
+    background-color: purple;
+}
+/* 푸터 */
+.footer{
+    background-color: pink;
+    height: 10vh;
+}
