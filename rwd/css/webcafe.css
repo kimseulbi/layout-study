@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css");
+@import url("fonts.css");
+*, *::before, *::after{
+    /* p+d=w */
+    box-sizing: border-box;
+}
+/* 스타일 초기화 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 1em;
+    font-size: 1em;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main{
+    display: block;
+}
+ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* 가상요소 clearfix 제작 */
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+/* 숨김 콘텐츠 */
+.readable-hidden, .skip-nav, legend{
+    background-color: yellow;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin:-1px;
+    clip: rect(0,0,0,0);
+}
+/* 동적으로 보이도록 처리 */
+.skip-nav:focus{
+    width: 100%;
+    height: auto;
+    padding: 1em;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    clip: rect(auto,auto,auto,auto);
+    z-index: 100;
+}
+/* 본문 스타일 */
+html{
+    font-size: 10px;
+}
+body{
+    color: #181818;
+    background-color: #fff;
+    font-family: "Noto Sans KR", sans-serif;
+}
+/* 하이퍼링크 스타일 */
+a{
+    color: inherit;
+    text-decoration: none;
+    /* cursor: crosshair; */
+}
+/* 레이아웃 */
+.header{
+    background: yellow;
+}
+.navigation{
+    background: pink;
+}
+.book{
+    background: lime;
+}
+.news{
+    background: skyblue;
+}
+.board{
+    background: orange;
+}
+.twitter{
+    background: yellow;
+}
+.slogan{
+    background: olive;
+}
+.footer{
+    background: violet;
+}
+/* 모바일 및 태블릿 디바이스 */
+@media screen and (max-width: 999px){
+    body{
+        font-size: 1.6rem;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    /* 헤더 */
+    .header{
+        padding: 0 1em;
+        background: #38302E;
+        display: flex;
+        flex-direction: column;
+    }
+    .logo{
+        margin: 1em 0  1rem  0;
+    }
+    /* 멤버 */
+    .member{
+        background: #988574;
+        order: -1;
+        display: flex;
+        justify-content: flex-end;
+        padding: .6em 0;
+        margin: 0 -1em;
+    }
+    .member a{
+        padding: .35em 1em;
+        color: #fff;
+    }
+    /* 검색 */
+    .search-form{
+        margin-bottom:1em ;
+    }
+    .search-form fieldset{
+        border: 0;
+        padding: 0;
+        margin: 0;
+    }
+    .search-form input{
+        width: calc(100% - 40px);
+        height: 30px;
+        border: 1px solid #666;
+        border-radius: 5px;
+        margin-right: 5px; 
+        padding: 1px 1px 1px 1em;
+    }
+    .btn-search{
+        width: 30px;
+        height: 30px;
+        position: relative;
+        /* 기존버튼 마크업 스타일 숨김 */
+        background: transparent;
+        border: 0;
+        /* 위로 올라간 영역 잡기 위해서 ?*/
+        padding: 0;
+    }
+    .btn-search::after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        background: url("images/btn_search.png") no-repeat 0 0;
+        background-size: 100%;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+    /* 네비게이션 */
+    .btn-menubar{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top:5em;
+        right:1em;
+        cursor: pointer;
+        background: transparent;
+        /* overflow: hidden; */
+    }
+    .menuber{
+        background: #fff;
+        position: absolute;
+        left: 0;
+        widows: 100%;
+        height: 20%;
+        border-radius: 10px;
+        transition: all 200ms;
+    }
+    .menu{
+        display:none;
+    }
+    .main{
+        padding: 0 1em;
+    }
+    .book{
+        margin-top: 1em;
+    }
+    .book-heading, .en-heading{
+        font-size: 1.2em;
+    }
+    .book-heading{
+        background: url(images/sprite_main.png) no-repeat 0 0;
+        margin-bottom: 1em;
+        min-height: 60px;
+        padding:  0 0 0 65px;
+    }
+    .en-heading{
+        color: #aba375;
+        display: block;
+    }
+    .book-cover{
+        width: 70%;
+        /* figure 가운데 정렬 text랑 동일 */
+        text-align: center;
+        margin: 0 auto;
+    }
+
+}
+/* 랩탑 및 와이드 스크린 디바이스 */
+@media screen and (min-width: 1000px){
+
+}
